@@ -26,3 +26,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '<CHANGE ME>',
+        'USER': '<CHANGEME>',
+        'PASSWORD': '<CHANGE ME>',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+
+
