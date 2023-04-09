@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Add a Note ({{ initials }})</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
+

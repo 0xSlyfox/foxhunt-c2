@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Logs</h2>
+  {% for log in logs %}
+    <p>{{ log.timestamp.strftime('%H%M%S') }}_{{ log.timestamp.strftime('%d-%m-%y') }}_{{ log.beacon.target_ip }}: {{ log.log_data }}</p>
+  {% endfor %}
+{% endblock %}
+

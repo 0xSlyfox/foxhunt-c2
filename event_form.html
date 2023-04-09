@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>{% if sequence_number %}Edit{% else %}Add{% endif %} Event</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% if sequence_number %}Save{% else %}Add{% endif %} Event</button>
+  </form>
+{% endblock %}
+
